@@ -50,7 +50,7 @@ HG_BLOCKS = args.hg_blocks
 END_RELU = False if args.end_relu == 'False' else True
 NUM_LANDMARKS = args.num_landmarks
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda:0,1" if torch.cuda.is_available() else "cpu")
 
 writer = SummaryWriter(CKPT_SAVE_PATH)
 
